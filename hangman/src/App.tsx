@@ -3,7 +3,7 @@ import words from "./wordList.json";
 import "./App.css";
 import { HangmanDrawing } from "./HangmanDrawing/HangmanDrawing";
 import { HangmanWord } from "./HangmanWord/HangmanWord";
-import { Keyboard } from "./Keyboard";
+import { Keyboard } from "./Keyboard/Keyboard";
 
 const App = () => {
   const [wordToGuess, setWordToGuess] = useState(() => {
@@ -15,7 +15,9 @@ const App = () => {
       <h1 className='win-or-lose-text'>Win Lose</h1>
       <HangmanDrawing />
       <HangmanWord />
-      <Keyboard />
+      <div style={{ alignSelf: "stretch" }}>
+        <Keyboard />
+      </div>
     </div>
   );
 };

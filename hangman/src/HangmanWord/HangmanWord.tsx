@@ -8,7 +8,7 @@ export const HangmanWord = () => {
       <div className='words'>
         {word.split("").map((letter, index) => {
           return (
-            <span className='letters-underline'>
+            <span className='letters-underline' key={index}>
               <span
                 style={{
                   visibility: guessedLetters.includes(letter)
