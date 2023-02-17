@@ -41,8 +41,9 @@
   border-radius: 100%;
   border: 10px solid black;
   position: absolute;
-  top: 50px;
-  right: -30px;
+
+  margin-left: 280px;
+  margin-top: 50px;
 }
 
 .body {
@@ -50,8 +51,9 @@
   height: 100px;
   background: black;
   position: absolute;
-  top: 120px;
-  right: 0;
+
+  margin-left: 310px;
+  margin-top: 110px;
 }
 
 .right-arm {
@@ -59,8 +61,9 @@
   height: 10px;
   background: black;
   position: absolute;
-  top: 150px;
-  right: -100px;
+
+  margin-left: 320px;
+  margin-top: 140px;
   rotate: -30deg;
   transform-origin: left bottom;
 }
@@ -70,8 +73,8 @@
   height: 10px;
   background: black;
   position: absolute;
-  top: 150px;
-  right: 10px;
+  margin-left: 210px;
+  margin-top: 140px;
   rotate: 30deg;
   transform-origin: right bottom;
 }
@@ -81,8 +84,8 @@
   height: 10px;
   background: black;
   position: absolute;
-  top: 210px;
-  right: -90px;
+  margin-left: 310px;
+  margin-top: 200px;
   rotate: 60deg;
   transform-origin: left bottom;
 }
@@ -92,8 +95,8 @@
   height: 10px;
   background: black;
   position: absolute;
-  top: 210px;
-  right: 0;
+  margin-left: 220px;
+  margin-top: 200px;
   rotate: -60deg;
   transform-origin: right bottom;
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import words from "./wordList.json";
 import "./App.css";
 import { HangmanDrawing } from "./HangmanDrawing/HangmanDrawing";
@@ -13,6 +13,43 @@ const App = () => {
   const incorrectLetters = guessedLetters.filter(
     (letter) => !wordToGuess.includes(letter)
   );
+
+  const addGuessedLetter = (letter: string) => {
+    if (guessedLetters.includes(letter)) return;
+    setGuessedLetters((currentLetters) => [...currentLetters, letter]);
+  };
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const key = e.key;
+      if (!key.match(/^[a-z]$/)) return;
+
+      e.preventDefault();
+      addGuessedLetter(key);
+    };
+
+    document.addEventListener("keypress", handler);
+
+    return () => {
+      document.removeEventListener("keypress", handler);
+    };
+  }, [guessedLetters]);
+
+  useEffect(() => {
+    const handler = (e: KeyboardEvent) => {
+      const key = e.key;
+      if (key !== "Enter") return;
+
+      e.preventDefault();
+      setGuessedLetters([]);
+      setWordToGuess(getWord());
+    };
+
+    document.addEventListener("keypress", handler);
+
+    return () => {
+      document.removeEventListener("keypress", handler);
+    };
+  }, []);
   return (
     <div className='container'>
       <h1 className='win-or-lose-text'>Win Lose</h1>
