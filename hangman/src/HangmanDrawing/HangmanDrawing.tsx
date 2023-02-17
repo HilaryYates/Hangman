@@ -7,8 +7,6 @@ export const HangmanDrawing = () => {
   const RIGHT_LEG = <div className='right-leg'></div>;
   const LEFT_LEG = <div className='left-leg'></div>;
 
-  // const LEFT_ARM = <div className='body'></div>;
-
   return (
     <div className='container'>
       {HEAD}
