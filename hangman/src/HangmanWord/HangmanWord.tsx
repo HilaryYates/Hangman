@@ -1,12 +1,18 @@
 import "./style.css";
 
-export const HangmanWord = () => {
-  const word = "test";
-  const guessedLetters = ["t"];
+type HangmanWordProps = {
+  guessedLetters: string[];
+  wordToGuess: string;
+};
+
+export const HangmanWord = ({
+  guessedLetters,
+  wordToGuess,
+}: HangmanWordProps) => {
   return (
     <div>
       <div className='words'>
-        {word.split("").map((letter, index) => {
+        {wordToGuess.split("").map((letter, index) => {
           return (
             <span className='letters-underline' key={index}>
               <span

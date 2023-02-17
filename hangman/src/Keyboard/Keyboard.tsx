@@ -33,7 +33,11 @@ export const Keyboard = () => {
     <div className='keyboard'>
       {KEYS.map((key) => {
         console.log(key);
-        return <button key={key}>{key}</button>;
+        return (
+          <button className='btn' key={key}>
+            {key}
+          </button>
+        );
       })}
     </div>
   );

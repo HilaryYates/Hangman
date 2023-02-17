@@ -9,8 +9,10 @@
   width: 10px;
   background: black;
   position: absolute;
-  top: 0;
-  right: 0;
+  /* top: 0;
+  right: 0; */
+  margin-left: 310px;
+  margin-top: 0px;
 }
 
 .pole {
