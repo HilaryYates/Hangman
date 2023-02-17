@@ -2,7 +2,7 @@ import { useState } from "react";
 import words from "./wordList.json";
 import "./App.css";
 import { HangmanDrawing } from "./HangmanDrawing/HangmanDrawing";
-import { HangmanWord } from "./HangmanWord";
+import { HangmanWord } from "./HangmanWord/HangmanWord";
 import { Keyboard } from "./Keyboard";
 
 const App = () => {
