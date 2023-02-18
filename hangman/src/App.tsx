@@ -52,12 +52,12 @@ const App = () => {
   }, []);
   return (
     <div className='container'>
-      <h1 className='win-or-lose-text'>Win Lose</h1>
+      {/* <h1 className='win-or-lose-text'>Win Lose</h1> */}
       <HangmanDrawing numberOfGuesses={incorrectLetters.length} />
       <HangmanWord guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
-      <div style={{ alignSelf: "stretch" }}>
-        <Keyboard />
-      </div>
+      {/* <div style={{ alignSelf: "stretch" }}> */}
+      {/* <Keyboard /> */}
+      {/* </div> */}
     </div>
   );
 };
